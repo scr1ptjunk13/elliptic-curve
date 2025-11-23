@@ -1,9 +1,17 @@
 [package]
 name = "elliptic-curve"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
+[[bin]]
+name = "ecdsa-demo"
+path = "src/main.rs"
 
 [dependencies]
-num-bigint = { version = "0.4.6", features = ["rand"] }
+num-bigint = { version = "0.4", features = ["rand"] }
 sha2 = "0.10"
 rand = "0.8"
+
+[lib]
+name = "elliptic_curve"
+path = "src/lib.rs"
